@@ -32,7 +32,6 @@ const Displaytable:React.FC<any> = (props:any) => {
     <Button onClick={DeleteData}><img  className='w-5 h-5 text-center' src={deletesvg} alt="" />删除</Button>
     <Button><img  className='w-5 h-5 text-center' src={modify} alt="" />修改</Button>
     <Button className='' ><img  className='w-5 h-5 text-center' src={Upload} alt="" />上传名单</Button>
-
     <Table 
     columns={colums}  
     scroll={tablesize} 

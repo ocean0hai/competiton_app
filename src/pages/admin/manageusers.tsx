@@ -2,6 +2,10 @@ import {Popconfirm } from 'antd'
 import type { ColumnsType } from 'antd/es/table'
 import React, { useState } from 'react'
 import Displaytable from '../../components/Displaytable'
+import {Dropdown,Button,Space,Select} from 'antd'
+import type { MenuProps } from 'antd'
+import { DownOutlined, UserOutlined } from '@ant-design/icons';
+//导航栏
 interface Columsobj{
   key:string;
   title:string;
@@ -33,6 +37,11 @@ const manageusers = (props)=> {
       key:i
     })
   }
+  ``
+  const handleChange = (value: string) => {
+    console.log(`selected ${value}`);
+  };
+
   const changeselect=(key: React.Key)=>{
     console.log(key);
   }
@@ -52,6 +61,17 @@ const manageusers = (props)=> {
 ]
   return (
     <>
+    <div>     
+      <Select
+        defaultValue="普通用户"
+        style={{ width: 120 }}
+        onChange={handleChange}
+        options={[
+          { value: 'users', label: '普通用户' },
+          { value: 'judge', label: '裁判' },
+        ]}
+      />
+    </div>
       <Displaytable datasource={dataSource} colums={colums} tablesize={tablesize}></Displaytable>
     </>
   )
