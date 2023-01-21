@@ -14,7 +14,7 @@ const Displaytable:React.FC<any> = (props:any) => {
   const [display,setDisplay]=useState<string>('none')
   
   //数据参数
-  const colums=props.colums
+  const colums:Array<any>=props.colums
   const tablesize=props.tablesize
   const datasource=props.datasource
   const displayblock=()=>{
@@ -26,7 +26,7 @@ const Displaytable:React.FC<any> = (props:any) => {
 
   return(
   <div>
-    <Actionform display={display} displaynone={displaynone}></Actionform>
+    <Actionform colums={colums} display={display} displaynone={displaynone}></Actionform>
     <Search placeholder="输入账号或名字" allowClear  onSearch={onSearch} enterButton />
     <Button onClick={displayblock}><img  className='w-5 h-5 text-center' src={add} alt=""/>添加</Button>
     <Button onClick={DeleteData}><img  className='w-5 h-5 text-center' src={deletesvg} alt="" />删除</Button>

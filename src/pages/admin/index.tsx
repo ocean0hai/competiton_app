@@ -35,7 +35,7 @@ const items: MenuItem[] = [
 const Admin: React.FC = () => {
   const navigate=useNavigate()
   const selectchange=(key:string)=>{
-    const selectarray=['manageusers','competitors','create','managecompetition']
+    const selectarray=['manageusers','create','competitors','managecompetition']
     const value=selectarray[Number(key)-1]
     navigate(value)
   }
