@@ -26,6 +26,8 @@ const login: React.FC = () => {
     if(selectvalue==='admin') {
       navigate('/admin')
     }
+    console.log(values);
+    
   }
   //选择身份
   const handleChange = (value: string) => {

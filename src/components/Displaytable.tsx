@@ -6,7 +6,7 @@ import add from '../assets/添加.svg'
 import deletesvg from '../assets/删除.svg'
 import modify from '../assets//修改.svg'
 import zh_CN from 'antd/es/locale/zh_CN'
-import { onSearch,DeleteData,AddData,Modify,UploadData } from '../utils/table';
+import { onSearch,DeleteData,AddData,Modify,UploadData } from '../utils/components/table';
 const {Search}=Input
 
 

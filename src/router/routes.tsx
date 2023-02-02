@@ -18,6 +18,7 @@ import Competitors from '../pages/admin/competitors'
 
 import Judgemessage from '../pages/judge/judgemessage'
 import Writescore from '../pages/judge/writescore'
+
 import Competitionrules from '../pages/judge/competitionrules'
 
 
@@ -40,7 +41,6 @@ export default[
       },
       {
         path:'scoreboard',
-
         element:<Scoreboard />
       },
       {

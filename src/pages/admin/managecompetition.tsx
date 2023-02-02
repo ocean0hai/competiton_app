@@ -14,12 +14,12 @@ interface Columsobj{
 
 }
 interface DataType {
-  name:string,
-  number:string,
-  college:string,
   competition:string,
-  score:string,
-  key: React.Key;
+  information:string,
+  referee:string,
+  state:string,
+  rule:string,
+  key:number
 }
 
 
@@ -32,11 +32,11 @@ const managecompetition = (props)=> {
   let [dataSource,setDataSource]=useState<DataType[]>([])
   for (let i = 0; i < 20; i++) {
     dataSource.push({
-      name:`${i}`,
-      number:`${i}`,
-      college:`${i}`,
       competition:`${i}`,
-      score:`${i}`,
+      information:`${i}`,
+      referee:`${i}`,
+      rule:`${i}`,
+      state:`${i}`,
       key:i
     })
   }
@@ -57,11 +57,11 @@ const managecompetition = (props)=> {
   }
   //表头
   const colums:ColumnsType<Columsobj>=[
-    {title: '比赛',width: 50,dataIndex: 'name',key: 'name'},
-    {title: '状态',width: 50,dataIndex: 'number',key: 'number'},
-    {title: '介绍',width: 50,dataIndex: 'college',key: 'college'},
-    {title: '比赛',width: 50,dataIndex: 'competition',key: 'comptetion'},
-    {title: '成绩',width: 50,dataIndex: 'score',key: 'score'},
+    {title: '比赛',width: 50,dataIndex: 'competition',key: 'competition'},
+    {title: '信息',width: 50,dataIndex: 'information',key: 'information'},
+    {title: '规则',width: 50,dataIndex: 'rule',key: 'rule'},
+    {title: '裁判员',width: 50,dataIndex: 'referee',key: 'referee'},
+    {title: '状态',width: 50,dataIndex: 'state',key: 'state'},
     {
       title: '',
       width: 50,
