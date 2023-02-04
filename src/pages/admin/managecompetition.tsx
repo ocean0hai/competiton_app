@@ -18,6 +18,7 @@ interface DataType {
   information:string,
   referee:string,
   state:string,
+  position:string,
   rule:string,
   key:number
 }
@@ -36,6 +37,7 @@ const managecompetition = (props)=> {
       information:`${i}`,
       referee:`${i}`,
       rule:`${i}`,
+      position:`${i}`,
       state:`${i}`,
       key:i
     })
@@ -58,8 +60,9 @@ const managecompetition = (props)=> {
   //表头
   const colums:ColumnsType<Columsobj>=[
     {title: '比赛',width: 50,dataIndex: 'competition',key: 'competition'},
-    {title: '信息',width: 50,dataIndex: 'information',key: 'information'},
-    {title: '规则',width: 50,dataIndex: 'rule',key: 'rule'},
+    {title: '比赛信息',width: 50,dataIndex: 'information',key: 'information'},
+    {title: '比赛规则',width: 50,dataIndex: 'rules',key: 'rules'},
+    {title: '比赛位置',width: 50,dataIndex: 'position',key: 'position'},
     {title: '裁判员',width: 50,dataIndex: 'referee',key: 'referee'},
     {title: '状态',width: 50,dataIndex: 'state',key: 'state'},
     {

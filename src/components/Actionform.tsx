@@ -1,9 +1,6 @@
 import React from 'react'
 import { Button,Input,Form } from 'antd'
 
-const onFinish=()=>{
-  
-}
 
 
 const  Actionform:React.FC<any>=(props:any)=> {
@@ -17,8 +14,12 @@ const  Actionform:React.FC<any>=(props:any)=> {
   const inpuobj=(value:string,key:string)=>{
     obj[key]=value
     console.log(obj);
-    
   }
+  const onFinish=(value)=>{
+  console.log(value);
+  
+  }
+  
   return (
     <div className='fixed w-full h-full opacity-90 top-0  right-0 bg-gray-200 z-50'  style={{display:props.display}} >
       <div className='fixed h-80 w-80  left-1/5 top-1/4 bg-red-600 opacity-100 ' >
@@ -32,13 +33,13 @@ const  Actionform:React.FC<any>=(props:any)=> {
                 if(item.title !=''){
                   return(         
                     <Form.Item 
+                    label={item.title}
+                    name={item.key}
                     className='float-left w-1/2' 
                     key={item.key}
                     >
-                      <span className='inline-block w-1/4'>{item.title}:</span>
                       <Input 
-                      onChange={(e)=>{inpuobj(e.target.value,item.key)}} 
-                      name={item.key} 
+                      // onChange={(e)=>{inpuobj(e.target.value,item.key)}} 
                       className='inline-block w-3/4'
                       />
                     </Form.Item>

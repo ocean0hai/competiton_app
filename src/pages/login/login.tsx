@@ -2,6 +2,21 @@ import React,{useState} from 'react';
 import { Button, message,Checkbox, Form, Input,Select,Space} from 'antd';
 import {useNavigate} from 'react-router-dom'
 
+const Options=[
+  {
+    value:'users',
+    label:'用户'
+  },
+  {
+    value:'judge',
+    label:'裁判员'
+  },
+  {
+    value:'admin',
+    label:'管理员'
+  }
+]
+
 const login: React.FC = () => {
   const [selectvalue,setSelectvalue]=useState<String>('')
   const [messageApi, contextHolder] = message.useMessage()
@@ -13,7 +28,6 @@ const login: React.FC = () => {
   const onFinish = (values:any) => {
     const username=values.username
     const password=values.password
-
     if (selectvalue.length===0) {
       Promptinformation()
     }
@@ -26,7 +40,6 @@ const login: React.FC = () => {
     if(selectvalue==='admin') {
       navigate('/admin')
     }
-    console.log(values);
     
   }
   //选择身份
@@ -42,20 +55,7 @@ const login: React.FC = () => {
         <Select
         className='w-32 inline-block'
           onChange={handleChange}
-          options={[
-            {
-              value:'users',
-              label:'用户'
-            },
-            {
-              value:'judge',
-              label:'裁判员'
-            },
-            {
-              value:'admin',
-              label:'管理员'
-            },
-          ]}
+          options={Options}
     />
       </div>
     <Form
@@ -68,7 +68,7 @@ const login: React.FC = () => {
       autoComplete="off"
       >
         <Form.Item
-        className='w-full'
+          className='w-full'
           label="账号"
           name="username"
           rules={[{ required: true, message: '请输入账号!'}]}
@@ -76,7 +76,7 @@ const login: React.FC = () => {
           <Input />
         </Form.Item>
         <Form.Item
-        className='w-52'
+          className='w-52'
           label="密码"
           name="password"
           rules={[{ required: true, message: '请输入密码!'}]}
