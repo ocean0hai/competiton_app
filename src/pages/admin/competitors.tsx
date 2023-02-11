@@ -30,16 +30,16 @@ const tablesize:object={
 const competitors = (props)=> {
   //测试数据
   let [dataSource,setDataSource]=useState<DataType[]>([])
-  for (let i = 0; i < 20; i++) {
-    dataSource.push({
-      name:`${i}`,
-      number:`${i}`,
-      college:`${i}`,
-      competition:`${i}`,
-      score:`${i}`,
-      key:i
-    })
-  }
+  // for (let i = 0; i < 20; i++) {
+  //   dataSource.push({
+  //     name:`${i}`,
+  //     number:`${i}`,
+  //     college:`${i}`,
+  //     competition:`${i}`,
+  //     score:`${i}`,
+  //     key:i
+  //   })
+  // }
   //选择器
   const selectlist=[
     { value: '100meters', label: '100米' },
@@ -57,6 +57,7 @@ const competitors = (props)=> {
   }
   //表头
   const colums:ColumnsType<Columsobj>=[
+    {title: '号码布',width: 50,dataIndex: 'id',key: 'id'},
     {title: '名字',width: 50,dataIndex: 'name',key: 'name'},
     {title: '学号',width: 50,dataIndex: 'number',key: 'number'},
     {title: '学院',width: 50,dataIndex: 'college',key: 'college'},

@@ -3,6 +3,7 @@ import { AppstoreOutlined, MailOutlined, SettingOutlined } from '@ant-design/ico
 import { Outlet,useNavigate } from 'react-router-dom';
 import type { MenuProps } from 'antd';
 import { Menu } from 'antd';
+import Backlogin from '../../components/backlogin'
 
 //菜单栏
 type MenuItem = Required<MenuProps>['items'][number];
@@ -43,6 +44,7 @@ const Admin: React.FC = () => {
   return (
     <div className='w-2xl bg-red-100'>
       <div className='w-full bg-blue-200 h-12 text-center'>管理</div>
+       <Backlogin></Backlogin>
       <div className='flex'>
         <Menu
           className='w-3/12  inline-block'
