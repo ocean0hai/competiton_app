@@ -17,6 +17,7 @@ const Displaytable:React.FC<any> = (props:any) => {
   const colums:Array<any>=props.colums
   const tablesize=props.tablesize
   const datasource=props.datasource
+  
   const displayblock=()=>{
     setDisplay('block')
   }
@@ -34,7 +35,7 @@ const Displaytable:React.FC<any> = (props:any) => {
     <Button className='' ><img  className='w-5 h-5 text-center' src={Upload} alt="" />上传名单</Button>
     <Table 
     columns={colums}  
-    scroll={tablesize} 
+    scroll={tablesize}  
     dataSource={datasource} 
     pagination={false} />
     <ConfigProvider locale={zh_CN}>

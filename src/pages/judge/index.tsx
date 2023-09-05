@@ -24,8 +24,8 @@ const index: React.FC = () => {
     navigate(value)
   }
   return (
-    <div className='mx-auto bg-red-100'>
-      <div className='w-full h-1/3 bg-red-200' >
+    <div className='mx-auto bg-blue-100'>
+      <div className='w-full h-1/3 bg-blue-200' >
         <Backlogin></Backlogin>
         <div>理工赛事</div>
       </div>
